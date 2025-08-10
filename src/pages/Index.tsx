@@ -25,10 +25,10 @@ const Index = () => {
 
           {/* Main Heading */}
           <div className="mb-16">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-4 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-4 leading-tight font-orbitron">
               Bios v3.0
             </h1>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold gradient-text">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold gradient-text font-orbitron">
               Próximamente!
             </h2>
           </div>

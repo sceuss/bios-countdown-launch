@@ -68,6 +68,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				'orbitron': ['Orbitron', 'monospace'],
+				'inter': ['Inter', 'sans-serif'],
+				'sans': ['Inter', 'sans-serif'],
+				'display': ['Orbitron', 'monospace'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',

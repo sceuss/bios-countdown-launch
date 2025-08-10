@@ -48,7 +48,7 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
           <div className="relative group">
             <div className="absolute inset-0 bg-neon-green/20 rounded-xl blur-md group-hover:blur-lg transition-all duration-300"></div>
             <div className="relative bg-tech-surface border border-tech-border rounded-xl px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10 min-w-[100px] md:min-w-[120px] lg:min-w-[140px]">
-              <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground block leading-none">
+              <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground block leading-none font-orbitron">
                 {String(unit.value).padStart(2, '0')}
               </span>
             </div>
