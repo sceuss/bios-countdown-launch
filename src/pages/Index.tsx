@@ -43,10 +43,7 @@ const Index = () => {
 
           {/* Additional Info */}
           <div className="mt-20 text-center">
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              La próxima generación de BiosComputer está llegando. Con tecnología avanzada, 
-              rendimiento mejorado y características innovadoras que revolucionarán tu experiencia.
-            </p>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">La próxima generación de BiosComputer está llegando...</p>
           </div>
         </div>
       </main>
