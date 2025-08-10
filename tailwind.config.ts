@@ -52,6 +52,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom tech theme colors
+				'neon-green': 'hsl(var(--neon-green))',
+				'tech-dark': 'hsl(var(--tech-dark))',
+				'tech-surface': 'hsl(var(--tech-surface))',
+				'tech-border': 'hsl(var(--tech-border))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

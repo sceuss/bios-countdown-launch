@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* BiosComputer Design System - Tech/Gaming inspired with neon green accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark tech theme */
+    --background: 220 15% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon green primary */
+    --primary: 140 100% 50%;
+    --primary-foreground: 220 15% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Tech gray secondary */
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Bright neon accent */
+    --accent: 120 100% 60%;
+    --accent-foreground: 220 15% 8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 140 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom design tokens for tech theme */
+    --neon-green: 140 100% 50%;
+    --neon-green-glow: 140 100% 40%;
+    --tech-dark: 220 15% 8%;
+    --tech-surface: 220 15% 12%;
+    --tech-border: 220 15% 25%;
+    
+    /* Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(140 100% 50%), hsl(120 100% 60%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 15% 10%), hsl(220 15% 6%));
+    --gradient-glow: radial-gradient(circle, hsl(140 100% 50% / 0.3), transparent 70%);
+    
+    /* Shadows and glows */
+    --shadow-neon: 0 0 20px hsl(140 100% 50% / 0.5);
+    --shadow-neon-strong: 0 0 30px hsl(140 100% 50% / 0.8);
+    --shadow-tech: 0 10px 30px hsl(220 15% 4% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.2s ease-in-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +123,74 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Neon glow effects */
+  .neon-glow {
+    box-shadow: var(--shadow-neon);
+    transition: var(--transition-glow);
+  }
+  
+  .neon-glow:hover {
+    box-shadow: var(--shadow-neon-strong);
+  }
+  
+  /* Tech grid background */
+  .tech-grid {
+    background-image: 
+      linear-gradient(hsl(220 15% 15% / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 15% 15% / 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  /* Animated gradient text */
+  .gradient-text {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 2s ease-in-out infinite alternate;
+  }
+  
+  /* Floating particles animation */
+  .floating-particle {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-particle:nth-child(2n) {
+    animation-delay: -2s;
+    animation-duration: 8s;
+  }
+  
+  .floating-particle:nth-child(3n) {
+    animation-delay: -4s;
+    animation-duration: 10s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.7;
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 1;
+  }
+  66% {
+    transform: translateY(10px) translateX(-5px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    filter: brightness(100%);
+  }
+  100% {
+    filter: brightness(120%);
   }
 }
