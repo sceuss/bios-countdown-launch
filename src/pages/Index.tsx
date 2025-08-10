@@ -2,14 +2,11 @@ import Navbar from "@/components/Navbar";
 import TechBackground from "@/components/TechBackground";
 import CountdownTimer from "@/components/CountdownTimer";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
   // Set target date for countdown (90 days from now)
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + 90);
-
-  return (
-    <div className="min-h-screen relative">
+  return <div className="min-h-screen relative">
       <TechBackground />
       <Navbar />
       
@@ -17,9 +14,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           {/* Latest Product Label */}
           <div className="mb-8">
-            <span className="inline-block text-sm font-semibold text-muted-foreground tracking-widest uppercase">
-              Último Producto
-            </span>
+            <span className="inline-block text-sm font-semibold text-muted-foreground tracking-widest uppercase">HOME</span>
             <div className="w-16 h-0.5 bg-neon-green mx-auto mt-2"></div>
           </div>
 
@@ -40,20 +35,10 @@ const Index = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
-            <Button 
-              variant="neon" 
-              size="lg" 
-              className="w-full sm:w-auto px-8 py-4 text-base font-bold tracking-wide"
-            >
+            <Button variant="neon" size="lg" className="w-full sm:w-auto px-8 py-4 text-base font-bold tracking-wide">
               VER BIOS V2
             </Button>
-            <Button 
-              variant="outline-neon" 
-              size="lg" 
-              className="w-full sm:w-auto px-8 py-4 text-base font-bold tracking-wide"
-            >
-              NOTIFICARME DEL LANZAMIENTO
-            </Button>
+            
           </div>
 
           {/* Additional Info */}
@@ -65,8 +50,6 @@ const Index = () => {
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
