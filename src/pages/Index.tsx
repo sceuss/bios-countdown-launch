@@ -3,8 +3,9 @@ import TechBackground from "@/components/TechBackground";
 import CountdownTimer from "@/components/CountdownTimer";
 import { Button } from "@/components/ui/button";
 const Index = () => {
-  // Set target date for countdown (December 1, 2025 at 00:00)
-  const targetDate = new Date('2025-12-01T00:00:00');
+  // Set target date for countdown (90 days from now)
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 90);
   return <div className="min-h-screen relative">
       <TechBackground />
       <Navbar />
