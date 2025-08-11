@@ -36,7 +36,7 @@ const Index = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
             <Button variant="neon" size="lg" className="w-full sm:w-auto px-8 py-4 text-base font-bold tracking-wide">
-              VER BIOS V2
+              MUY PRONTO
             </Button>
             
           </div>
