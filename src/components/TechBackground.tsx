@@ -1,8 +1,13 @@
 const TechBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* Base gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-tech-dark via-background to-tech-surface"></div>
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(/lovable-uploads/8e3be727-c490-4116-a059-2a5776c96dd5.png)` }}
+      ></div>
+      {/* Overlay gradient for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-tech-dark/30 via-background/20 to-tech-surface/30"></div>
       
       {/* Tech grid overlay */}
       <div className="absolute inset-0 tech-grid opacity-30"></div>
